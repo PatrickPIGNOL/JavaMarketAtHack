@@ -10,7 +10,7 @@
 
   <name>JavaMarketAtHack</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://pignol.ovh</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,6 +45,42 @@
 	    <groupId>com.google.guava</groupId>
 	    <artifactId>guava</artifactId>
 	    <version>31.1-jre</version> <!-- or 23.5-android for the Android flavor -->
+	</dependency>
+	
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-base</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-controls</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-fxml</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-graphics</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-media</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-swing</artifactId>
+		<version>11</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-web</artifactId>
+		<version>11</version>
 	</dependency>
     
   </dependencies>
