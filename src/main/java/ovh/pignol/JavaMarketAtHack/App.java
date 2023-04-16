@@ -1,13 +1,12 @@
 package ovh.pignol.JavaMarketAtHack;
 
-/**
- * Hello world!
- *
- */
+import ovh.pignol.JavaSelenium.Probe;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	Probe vProbe = new OpenFoodFactsProbe();
+    	vProbe.mStart();
     }
 }

@@ -25,6 +25,28 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>
+   		 <groupId>org.seleniumhq.selenium</groupId>
+   		 <artifactId>selenium-java</artifactId>
+   		 <version>4.8.1</version>
+   	 </dependency>
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-http-jdk-client</artifactId>
+		<version>4.8.1</version>
+	</dependency>
+	<dependency>
+		<groupId>ovh.pignol</groupId>
+		<artifactId>JavaSelenium</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+    <dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>31.1-jre</version> <!-- or 23.5-android for the Android flavor -->
+	</dependency>
+    
   </dependencies>
 
   <build>
