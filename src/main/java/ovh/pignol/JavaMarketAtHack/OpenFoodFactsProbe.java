@@ -4,8 +4,8 @@ import ovh.pignol.JavaSelenium.Chrome;
 import ovh.pignol.JavaSelenium.Probe;
 import ovh.pignol.JavaSelenium.WebBrowser;
 
-public class OpenFoodFactsProbe extends Probe {
-
+public class OpenFoodFactsProbe extends Probe 
+{
 	@Override
 	public void mProbe() 
 	{
@@ -13,11 +13,11 @@ public class OpenFoodFactsProbe extends Probe {
 		try(WebBrowser vChrome = new Chrome())
 		{
 			this.mTestSite(vChrome, "https://fr.openfoodfacts.org/");
+			
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
 	}
-
 }
