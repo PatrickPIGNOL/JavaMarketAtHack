@@ -1,12 +1,11 @@
 package ovh.pignol.JavaMarketAtHack;
 
-import ovh.pignol.JavaSelenium.Probe;
+import javafx.application.Application;
 
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] pArguments )
     {
-    	Probe vProbe = new OpenFoodFactsProbe();
-    	vProbe.mStart();
+    	Application.launch(MarketAtHackApplication.class, pArguments );
     }
 }
