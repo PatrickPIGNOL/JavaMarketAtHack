@@ -1,12 +1,15 @@
 package ovh.pignol.JavaMarketAtHack;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
+import ovh.pignol.JavaSelenium.Probe;
 
 public class MarketAtHackApplication extends Application
 {
@@ -31,7 +34,17 @@ public class MarketAtHackApplication extends Application
 		this.aStartButton.setDefaultButton(true);
 		this.aCloseButton = new Button("Close");
 		this.aCloseButton.setLayoutY(this.aYPadding * 3);
-		
+		this.aCloseButton.setOnAction
+		(
+			new EventHandler<ActionEvent>()
+			{
+				@Override
+				public void handle(ActionEvent pEvent)
+				{
+					mCloseOnAction(pEvent);
+				}
+			}
+		);
 		Group vRoot = new Group();
 		this.aWindow.setScene(new Scene(vRoot));
 		vRoot.getChildren().addAll(this.aPasswordLabel, this.aPasswordField, this.aStartButton, this.aCloseButton);
@@ -41,5 +54,24 @@ public class MarketAtHackApplication extends Application
 	public Stage mWindow()
 	{
 		return this.aWindow;
+	}
+	
+	public void mCloseOnAction(ActionEvent pEvent)
+	{
+		this.aWindow.close();
+	}
+	
+	public void mLaunchOnAction(ActionEvent pEvent)
+	{
+		MarketAtHackPreferences.mInstance().mMySQLPassword(this.aPasswordField.getAccessibleText());		
+		try(Probe vOpenFoodFactProbe = new OpenFoodFactsProbe())
+		{
+			vOpenFoodFactProbe.mStart();
+			vOpenFoodFactProbe.mJoin();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }

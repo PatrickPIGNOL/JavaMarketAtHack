@@ -47,6 +47,13 @@
 	    <version>31.1-jre</version> <!-- or 23.5-android for the Android flavor -->
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.33</version>
+	</dependency>
+	
 	<dependency>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx-base</artifactId>
@@ -82,7 +89,12 @@
 		<artifactId>javafx-web</artifactId>
 		<version>11</version>
 	</dependency>
-    
+
+	<dependency>
+		<groupId>ovh.pignol</groupId>
+		<artifactId>JavaMySQL</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 
   <build>
